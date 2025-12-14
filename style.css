@@ -1,0 +1,115 @@
+html,
+body,
+*,
+:root {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: "Days One", sans-serif;
+}
+
+.hero,
+.product {
+    scroll-snap-align: start;
+}
+
+.hero {
+    background-image: url("assets/images/main-image.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+
+}
+
+.hero-text {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    border-radius: 16px;
+
+}
+
+.product {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 26px;
+
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    font-weight: 300;
+
+
+}
+
+.product-content {
+    color: white;
+    width: 500px;
+    max-width: 750px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    border-radius: 16px;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 20px rgba(128, 0, 255, 0.8);
+    }
+
+    50% {
+        box-shadow: 0px 0px 25px rgba(0, 200, 255, 0.8);
+    }
+
+    100% {
+        box-shadow: 0px 0px 30px rgba(255, 0, 150, 0.8);
+    }
+}
+
+
+.product-content:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #FACE68;
+    transition: all ease-in-out 0.5s;
+}
+
+.product-stats {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0 18px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.stat {
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: #0f110f;
+    border: 1px solid #0f110f;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: gray;
+    font-size: 13px;
+}
